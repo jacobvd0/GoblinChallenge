@@ -1,4 +1,4 @@
-﻿
+
 using System.Data.Common;
 
 namespace ArrayChallenge
@@ -47,12 +47,15 @@ namespace ArrayChallenge
                 }
             }
 
+            // Sorts goblin array
             void SecretSort()
             {
+                // Variables used for the loops
                 var totalGoblins = 0;
                 var nullGoblins = 0;
                 var progress = 0;
 
+                // Check how many null and normal goblins there are
                 foreach (Goblin goblin in goblins)
                 {
                     if (goblin == null)
@@ -64,11 +67,15 @@ namespace ArrayChallenge
                         totalGoblins++;
                     }
                 }
+
+                // Add the normal goblins
                 for (int i = 0; i < totalGoblins; progress++)
                 {
                     goblins[progress] = new Goblin();
                     i++;
                 }
+
+                // Add the null goblins
                 for (int i = 0; i < nullGoblins; progress++)
                 {
                     goblins[progress] = null;
